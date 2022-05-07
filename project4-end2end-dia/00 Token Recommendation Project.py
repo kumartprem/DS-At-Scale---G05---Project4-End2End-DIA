@@ -117,10 +117,10 @@ if json.loads(result_etl)["test_val"] == 0:
 # COMMAND ----------
 
 # run link to the EDA notebook
-# result_eda = dbutils.notebook.run("02 EDA", 0,  {"00.Wallet_Address":wallet_address, "01.Start_Date":start_date})
+result_eda = dbutils.notebook.run("02 EDA", 0,  {"00.Wallet_Address":wallet_address, "01.Start_Date":start_date})
 
 # Check for success
-# assert json.loads(result_eda)["exit_code"] == "OK", "EDA Failed!" # Check to see that it worked
+assert json.loads(result_eda)["exit_code"] == "OK", "EDA Failed!" # Check to see that it worked
 
 # COMMAND ----------
 
